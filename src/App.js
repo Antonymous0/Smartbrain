@@ -64,7 +64,7 @@ loadUser = (data) => {
   onButtonSubmit = () => {
     this.setState({imageUrl: this.state.input});
      
-     fetch('http://localhost:3001/imageurl', {
+     fetch(' https://agile-lowlands-12996.herokuapp.com/imageurl', {
           method: 'post',
           headers: {'Content-Type': 'application/json'},
           body: JSON.stringify({
@@ -75,7 +75,7 @@ loadUser = (data) => {
 
     .then(response => {
       if(response) {
-        fetch('http://localhost:3001/image', {
+        fetch(' https://agile-lowlands-12996.herokuapp.com/image', {
           method: 'put',
           headers: {'Content-Type': 'application/json'},
           body: JSON.stringify({
